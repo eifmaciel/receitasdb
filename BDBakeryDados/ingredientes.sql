@@ -1,8 +1,8 @@
-insert into ingredientes values (100, 'farinha de trigo', 'farinha branca');
+﻿insert into ingredientes values (100, 'farinha de trigo', 'farinha branca');
 insert into ingredientes values (101, 'farinha de milho', ' ');
 insert into ingredientes values (102, 'farinha de arroz', ' ');
 insert into ingredientes values (103, 'ovos', ' ');
-insert into ingredientes values (104, 'manteiga', 'sem sal');,
+insert into ingredientes values (104, 'manteiga', 'sem sal');
 insert into ingredientes values (105, ' oleo',' ');
 insert into ingredientes values (106, 'acucar branco', ' ');
 insert into ingredientes values (107, 'acucar mascavo', ' ');
@@ -55,6 +55,6 @@ insert into ingredientes values (178, 'queijo parmesao','ralado');
 insert into ingredientes values (179, 'leite','');
 insert into ingredientes values (180, 'grao de bico','natural');
 insert into ingredientes values (181,'limão','bergamota');
-insert into ingredientes values (182,'beringela'.'');
+insert into ingredientes values (182,'beringela','');
 insert into ingredientes values (183,'Granulado','colorido');
 insert into ingredientes values (184,'cebolinha','');

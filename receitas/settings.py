@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'receitas_db4',
         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'p',
         'HOST': '127.0.0.1',
         'PORT': '', # 8000 is default
     }

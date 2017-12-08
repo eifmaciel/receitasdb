@@ -9,8 +9,8 @@ class location(models.Model):
 	zip  = models.BigIntegerField()
   	street =models.CharField(max_length=50)
   	storenum = models.AutoField(primary_key=True)
-	
-	
+
+
 	class Meta:
 		db_table = 'location'
 
@@ -35,7 +35,7 @@ class receipts(models.Model):
 	saledate = models.BooleanField()
 	location_id = models.ForeignKey(location, on_delete=models.CASCADE)
 	employee_id = models.ForeignKey(employee, on_delete=models.CASCADE)
-	
+
 
 	class Meta:
 		db_table = 'receipts'
@@ -54,8 +54,8 @@ class goods(models.Model):
 
 class items(models.Model):
 	id= models.AutoField(primary_key=True)
-	quantidade = models.IntegerField()
 	goods_id = models.ForeignKey(goods, on_delete=models.CASCADE)
+	quantidade = models.IntegerField()
 	receipts_id = models.ForeignKey(receipts, on_delete=models.CASCADE)
 
 
@@ -70,10 +70,9 @@ class Categoria(models.Model):
 		db_table = 'categoria'
 
 class Livro(models.Model):
-	isbn = models.BigIntegerField()
+	cpf = models.BigIntegerField(primary_key=True)
 	nome= models.CharField(max_length=100)
-	cpf = models.AutoField(primary_key=True)
-
+	isbn = models.BigIntegerField()
 
 	class Meta:
 		db_table = 'livro'
@@ -88,7 +87,7 @@ class Ingredientes(models.Model):
 		db_table = 'ingredientes'
 
 class Funcionario(models.Model):
-	cpf = models.AutoField(primary_key=True)
+	cpf = models.BigIntegerField(primary_key=True)
 	nome= models.CharField(max_length=50)
 	dataingresso= models.DateField()
 	salario= models.FloatField()
@@ -99,16 +98,16 @@ class Funcionario(models.Model):
 
 
 class Cozinheiro(models.Model):
-	cpf = models.AutoField(primary_key=True)
+	cpf = models.BigIntegerField(primary_key=True)
 	nomefantasia= models.CharField(max_length=50)
-	nomefantasia= models.CharField(max_length=100)
+	especialidade= models.CharField(max_length=100)
 
 
 	class Meta:
 		db_table = 'cozinheiro'
 
 class Degustador(models.Model):
-	cpf = models.AutoField(primary_key=True)
+	cpf = models.BigIntegerField(primary_key=True)
 	curso= models.CharField(max_length=50)
 
 
@@ -125,7 +124,7 @@ class Receitas(models.Model):
 	descricao= models.CharField(max_length=150)
 	cpfcoz = models.ForeignKey(Cozinheiro, on_delete=models.CASCADE)
 	codcat= models.ForeignKey(Categoria, on_delete=models.CASCADE)
-	idgood= models.ForeignKey(Ingredientes, on_delete=models.CASCADE)
+	idgood= models.ForeignKey(goods, on_delete=models.CASCADE)
 
 
 	class Meta:
@@ -134,7 +133,7 @@ class Receitas(models.Model):
 class TesteReceita(models.Model):
 	codrec = models.ForeignKey(Receitas, on_delete=models.CASCADE)
 	cpfdeg = models.ForeignKey(Degustador, on_delete=models.CASCADE)
-	data = models.DateField()
+	data = models.CharField(max_length=50)
 	nota= models.IntegerField(max_length=150)
 
 
