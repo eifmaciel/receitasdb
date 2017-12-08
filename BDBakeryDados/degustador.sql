@@ -1,0 +1,10 @@
+insert into degustador values (12345688800, 'Sobremesas ao ponto');
+insert into degustador values (12345622200, 'Aprimorando o paladar');
+insert into degustador values (12345297200, 'Estética culinária');
+insert into degustador values (12345603700, 'Sobremesas saborosas');
+insert into degustador values (12345677700, 'Aprendendo sobre temperos');
+insert into degustador values (12343612200, 'Tudo sobre Peixes');
+insert into degustador values (12345678900, 'Primeiros passos na culinaria');
+insert into degustador values (12341234992, 'Mestres da Cozinha');
+insert into degustador values (12341234299,'Doutores da Cozinha');
+insert into degustador values (12341234001,'Mestres da Cozinha');

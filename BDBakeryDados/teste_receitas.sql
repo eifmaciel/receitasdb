@@ -1,0 +1,13 @@
+insert into teste_receita values (1, 12345688800, '29Fev17', 10);
+insert into teste_receita values (2, 12345622200, '30Fev17', 8);
+insert into teste_receita values (3, 12345297200, '05Mar17', 9);
+insert into teste_receita values (4, 12345603700, '29Abr17', 7);
+insert into teste_receita values (5, 12345677700, '11Out17', 5);
+insert into teste_receita values (6, 12345297200, '18Jan17', 9);
+insert into teste_receita values (7, 12343612200, '01Ago17', 10);
+insert into teste_receita values (14,12341234992,'19Jul05', 10);
+insert into teste_receita values (15,12341234992,'19Jul05', 10);
+insert into teste_receita values (16,12341234992,'19Jul05', 10);
+insert into teste_receita values (17,12341234299,'29Jul10', 10);
+insert into teste_receita values (18,12341234299,'29Jul10', 10);
+insert into teste_receita values (19,12341234001,'18Set16' ,10);

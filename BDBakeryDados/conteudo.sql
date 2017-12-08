@@ -1,0 +1,17 @@
+insert into conteudo values (9781236666666, 1);
+insert into conteudo values (9781236666666, 2);
+insert into conteudo values (9781234444444, 3);
+insert into conteudo values (9781237777777, 4);
+insert into conteudo values (9781234444444, 5);
+insert into conteudo values (9781237777777, 6);
+insert into conteudo values (9781237772548, 7);
+insert into conteudo values (9781237773658, 8);
+insert into conteudo values (9781237770218, 9);
+insert into conteudo values (9781237772398, 10);
+insert into conteudo values (9781237772589, 11);
+insert into conteudo values (9781237771234,7);
+insert into conteudo values (9781237771234,14);
+insert into conteudo values (9781237774321,15);
+insert into conteudo values (9781237774321,16);
+insert into conteudo values (9781237774321,17);
+insert into conteudo values (9781237774321,18);

@@ -1,0 +1,10 @@
+insert into cozinheiro values (12345678900, 'Maurinho', 'risotos');
+insert into cozinheiro values (12345677700, 'Mestre Andre', 'molhos');
+insert into cozinheiro values (12345611100, 'Lu', 'doces');
+insert into cozinheiro values (12345678000, 'Bina', 'pratos quentes');
+insert into cozinheiro values (12343612200, 'Paulão', 'carnes');
+insert into cozinheiro values (12345622200, 'Chef Álvaro', 'frutos do mar');
+insert into cozinheiro values (12345603700, 'Lu Silvinha', 'salgados');
+insert into cozinheiro values (12345297200, 'Alvinha', 'saladas');
+insert into cozinheiro values (12341234666, 'Pelé', 'risotos');
+insert into cozinheiro values (12341234991, 'Sil', 'paes');

@@ -1,0 +1,243 @@
+Complemente os dados para o banco de dados “Receitas+Bakery”:
+
+
+Categoria (codcat, nome);:
+(1, 'bolos');
+(2, 'risotos');
+(3, 'pudins');
+(4, 'paes');
+(5, 'massas');
+(6, 'biscoitos');
+(7, 'sopas');
+(8, 'carnes');
+(9, 'sobremesas');
+(10, 'saladas');
+(11, 'frituras');
+(12, 'tortas');
+(13, 'peixes');
+(14, 'bebidas');
+(15, 'frutos do mar');
+(16, 'salgados');
+(17, 'pratos principais vegetarianos');
+(18, 'petiscos');
+(19, 'aperitivos');
+(20, 'massas');
+(21, 'bebidas');
+(22, 'molhos');
+
+Livro(isbn, titulo, #cpf);:
+(9781234567890, 'Receitas para todos',12345611100);
+(9781234444444, 'Cozinha saudavel',12345611100);
+(9781235555555, 'O livro das receitas',12345611100);
+(9781236666666, 'Pratos elaborados',12345611100);
+(9781237777777, 'Receitas faceis e rapidas',12345611100);
+(9781237772548, 'Cozinha facil', 12345677700);
+(9781237773658, 'A arte de cozinhar', 12345611100);
+(9781237770218, 'Cozinha brasileira', 12345688800);
+(9781237772398, 'Cozinha francesa', 12345678000);
+(9781237772589, 'Cozinha italiana', 12345297200);
+(9781237771234, 'Risottos de Garagem',12345678000);
+(9781237774321, 'Choque Gourmet',12345297200);
+(9781237774322, 'Comida de Bebê', 69383166606);
+(9781237774323, 'O que Tem na Geladeira', 57784267983);
+(9781237774324, 'Dona Benta - Comer Bem', 38702223520);
+(9781237774325, 'Vegano sem Frescura', 28001489779);
+(9781237774326, 'Nutrindo seus Sentidos', 52537117085);
+
+Ingredientes(codingr, nome, descricao);:
+(100, 'farinha de trigo', 'farinha branca');
+(101, 'farinha de milho', ' ');
+(102, 'farinha de arroz', ' ');
+(103, 'ovos', ' ');
+(104, 'manteiga', 'sem sal');,
+(105, ' oleo',' ');
+(106, 'acucar branco', ' ');
+(107, 'acucar mascavo', ' ');
+(108, 'adocante', ' ');
+(109, 'claras de ovos', ' ');
+(110, 'gemas de ovos', ' ');
+(111, 'fermento em po', ' ');
+(112, 'fermento biologico', ' ');
+(113, 'chocolate em po', ' ');
+(114, 'achocolatado', ' ');
+(115, 'leite condensado', ' ');
+(121, 'arroz branco', ' ');
+(122, 'arroz arboreo', ' ');
+(123, 'arroz integral', ' ');
+(131, 'espaguete', ' ');
+(132, 'macarrao', ' ');
+(133, 'fusili', ' ');
+(140, 'tomate', ' ');
+(141, 'cebola', ' ');
+(142, 'alho', ' ');
+(143, 'tempero verde', ' ');
+(144, 'cenoura', ' ');
+(145, 'moranga', ' ');
+(146, ' abobrinha', ' ');
+(147, 'manjericao', ' ');
+(148, 'batata inglesa', ' ');
+(149, 'batata doce', ' ');
+(150, 'queijo ralado', ' ');
+(151, 'queijo prato', ' ');
+(152, 'queijo mussarela', ' ');
+(160, 'peito de frango', ' ');
+(161, 'asa de frango', ' ');
+(162, 'coxa de frango', ' ');
+(163, 'peixe', ' ');
+(164, ' agua', 'da torneira');
+(165, 'leite', ' ');
+(166, 'alface', ' ');
+(167, 'aveia', 'comum');
+(168, 'cevada', ' ');
+(169, 'quinoa', ' ');
+(170, 'sagu', 'brasileiro');
+(171, 'trigo', 'sarraceno');
+(172, 'cogumelo', 'seco');
+(173, 'salsa', '');
+(174, 'arroz','para risotto');
+(175, 'agua', 'da torneira');
+(176, 'caldo', 'de legumes');
+(177, 'sal', '');
+(178, 'queijo parmesao','ralado');
+(179, 'leite','');
+(180, 'grao de bico','natural');
+(181,'limão','bergamota');
+(182,'beringela'.'');
+(183,'Granulado','colorido');
+(184,'cebolinha','');
+
+
+Funcionario(cpf, nome, dataingresso, salario);:
+(12345678900, 'Mauro Pedrosa', '14/03/2014', 3000);;
+(12345677700, 'Andre Carlos', '10/10/2015', 3000);;
+(12345688800, 'Mirtes Salvador', '20/10/2015', 3000);;
+(12345699900, 'Julian Passos', '20/10/2015', 3500);;
+(12345611100, 'Luciana Romeni', '10/10/2015', 3100);;
+(12345622200, 'Alvaro Coelho', '25/11/2016', 2500);;
+(12345297200, 'Luciana Alves', '15/08/2016', 3500);;
+(12345603700, 'Luana da Silva', '01/02/2014', 2000);;
+(12345678000, 'Sabrina Parenza', '06/05/2013', 4200);;
+(12343612200, 'Paulo Espinoza', '20/04/2012', 4500);;
+(12343612580, 'Julio Prates', '09/07/2015', 4700);;
+(12341234666, 'Edson Arantes do Nascimento', '29/06/1958',5740);;
+(12341234991, 'Silvia Silva', '23/12/2012',3100);;
+(12341234992, 'Ada Asimoov', '21/12/2003', 6000);;
+(12341234299, 'Alexandra Kafka', '01/03/2011', 5840);;
+(12341234001, 'Homer Simpson', '01/05/2016', 800);;
+
+
+Cozinheiro(#cpf, nomefantasia, especialidade);:
+(12345678900, 'Maurinho', 'risotos');
+(12345677700, 'Mestre Andre', 'molhos');
+(12345611100, 'Lu', 'doces);
+(12345678000, 'Bina', 'pratos quentes');
+(12343612200, 'Paulão', 'carnes');
+(12345622200, 'Chef Álvaro', 'frutos do mar');
+(12345603700, 'Lu Silvinha', 'salgados');
+(12345297200, 'Alvinha', 'saladas');
+(12341234666, 'Pelé', 'risotos');
+(12341234991, 'Sil', 'paes');
+
+Degustador(#cpf, curso);:
+(12345688800, 'Sobremesas ao ponto');
+(12345622200, 'Aprimorando o paladar');
+(12345297200, 'Estética culinária');
+(12345603700, 'Sobremesas saborosas');
+(12345677700, 'Aprendendo sobre temperos');
+(12343612200, 'Tudo sobre Peixes');
+(12345678900, 'Primeiros passos na culinaria');
+(12341234992, 'Mestres da Cozinha');
+(12341234299,'Doutores da Cozinha');
+(12341234001,'Mestres da Cozinha');
+
+Receitas(codrec, nome, nroporcoes, tempopreparo, grau, data, descricao, #cpfcoz, #codcat, #idgood);
+(1, 'Miojo', 1, '5min', 0, '29Fev17', 'Macarrão Instantâneo', 12345678900, 5, 0);
+(2, 'Gelo', 12, '1h00min', 0, '31Abr17', 'Água sólida', 12345677700, 7, 1);
+(3, 'Achocolatado', 1, '1min', 1, '31Jun17', 'Leite com nescau', 12345611100, 9, 2);
+(4, 'Alface', 2, '3min', 1, '31Set17', 'Salada de Alface', 12345678900, 10, 3);
+(5, 'Ovo Frito', 1, '5min', 2, '31Nov17', 'Ovo Frito', 12345677700, 11, 4);
+(6, 'Sashimi', 4, '0min', 0, '29Fev18', 'Salmao Cru', 12345611100, 8, 5);
+(7, 'Risoto', 2, '30min', 5, '31Abr17', 'Arroz com queijo', 12345678900, 2, 6);
+(8, 'Abacaxi', 3, '20min', 2, '02Mar17', 'Assado no espeto', 12345611100, 9, 1);
+(9, 'Abobrinha', 3, '30min', 3, '05Dez16', 'Recheada', 112345297200, 2, 6);
+(10, 'Amendoim', 4, '15min', 2, '07Abr17', 'Doce', 12345678000, 9, 3);
+(11, 'Arroz', 6, '35min', 4, '31Mai17', 'Doce', 12345611100, 9, 1);
+(12, 'Caldinho', 5, '40min', 5, '16Jun17', 'De feijao', 12345622200, 7, 2);
+(13,'Biscoito',10,'40min',5,'17Jan15','Tuile',12345611100,6,28);
+(14, "Risotto", 5, '28min',0,'01Jan09', 'Com Cogumelos',12341234666,2,9);
+(15, "Pão", 1, '8min',0,'22Mar11', 'De Iogurte',12341234991,4,9);
+(16, "Mousse", 5, '5h12min',0,'16Set12', 'De Chocolate',12341234991,9,9);
+(17, "Hamburguer", 5, '38min',0,'11Mar15', 'de Okara'',12341234991,17,9);
+(18, "Pão", 1, '45min',0,'17Jul92', 'De Ló',12341234666,2,8);
+(19, "Torta", 1, '50min',0,'18Ago92', 'Fria de Atum',12341234991,12,9);
+
+Incluir(#codingr, #codrec, quantidade, unidademedida);  //ingredientes de uma receita
+(132, 1, 100, 'grama');
+(164, 1, 500, 'ml');
+(164, 2, 300, 'ml');
+(164, 3, 300, 'ml');
+(113, 3, 3, 'colher de sopa');
+(166, 4, 1, 'unidade');
+(105, 4, 10, 'ml');
+(105, 5, 30, 'ml');
+(103, 5, 2, 'unidade');
+(163, 6, 1, 'kg');
+(121, 7, 300, 'grama');
+(152, 7, 100, 'grama');
+(164, 7, 350, 'ml');
+(113, 10, 500, 'grama');
+(103, 9, 400, 'grama');
+(121, 2, 200, 'ml');
+(132, 3, 250, 'ml');
+(152, 12, 450, 'ml');
+(172,14,50,'grama');
+(173,14,2,'ramos');
+(141,14,1,'unidade');
+(174,14,30,'grama');
+(175,14,900,'grama');
+(176,14,1,'unidade');
+(177,14,1,'Colher de sopa');
+(104,14,20,'grama');
+(178,14,40,'grama');
+(100,15,200,'grama');
+(175,15,150,'grama');
+(103,16,5,'unidade');
+(103,18,4,'unidade');
+(179,18,2,'xícaras');
+
+Teste(#codrec, #cpfdeg, data, nota);  //teste da receita por um degustador);
+(1, 12345688800, '29Fev17', 10);
+(2, 12345622200, '30Fev17', 8);
+(3, 12345297200, '05Mar17', 9);;
+(4, 12345603700, '29Abr17', 7);;
+(5, 12345677700, '11Out17', 5);;
+(6, 12345297200, '18Jan17', 9);;
+(7, 12343612200, '01Ago17', 10);;
+(14,12341234992,'19Jul05', 10);
+(15,12341234992,'19Jul05', 10);
+(16,12341234992,'19Jul05', 10);
+(17,12341234299,'29Jul10', 10);
+(18,12341234299,'29Jul10', 10);
+(19,12341234001,'18Set16' ,10);
+
+Conteudo(#isbn, #codrec);  //receitas de cada livro
+(9781236666666, 1);
+(9781236666666, 2);
+(9781234444444, 3);
+(9781237777777, 4);
+(9781234444444, 5);
+(9781237777777, 6);
+(9781237772548, 7);
+(9781237773658, 8);
+(9781237770218, 9);
+(9781237772398, 10);
+(9781237772589, 11);
+(9781237771234,7);
+(9781237771234,14);
+(9781237774321,15);
+(9781237774321,16);
+(9781237774321,17);
+(9781237774321,18);
+
+
+
