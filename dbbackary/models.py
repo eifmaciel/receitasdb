@@ -14,6 +14,9 @@ class location(models.Model):
 	class Meta:
 		db_table = 'location'
 
+	def __unicode__(self):
+		return u'%s' %(self.storenum)
+
 class employee(models.Model):
 	first = models.CharField(max_length=100)
 	last = models.CharField(max_length=100)
@@ -27,6 +30,8 @@ class employee(models.Model):
 	class Meta:
 		db_table = 'employee'
 
+	def __unicode__(self):
+		return u'%s' %(self.empid)
 
 class receipts(models.Model):
 	receiptnumber= models.AutoField(primary_key=True)
@@ -40,6 +45,10 @@ class receipts(models.Model):
 	class Meta:
 		db_table = 'receipts'
 
+	def __unicode__(self):
+		return u'%s' %(self.receiptnumber)
+
+
 class goods(models.Model):
 	id= models.AutoField(primary_key=True)
 	food= models.CharField(max_length=50)
@@ -50,6 +59,9 @@ class goods(models.Model):
 
 	class Meta:
 		db_table = 'goods'
+
+	def __unicode__(self):
+		return u'%s' %(self.id)
 
 
 class items(models.Model):
@@ -62,12 +74,18 @@ class items(models.Model):
 	class Meta:
 		db_table = 'items'
 
+	def __unicode__(self):
+		return u'%s' %(self.id)
+
 class Categoria(models.Model):
 	codcat=models.AutoField(primary_key=True)
 	nome= models.CharField(max_length=100)
 
 	class Meta:
 		db_table = 'categoria'
+
+	def __unicode__(self):
+		return u'%s' %(self.codcat)
 
 class Livro(models.Model):
 	cpf = models.BigIntegerField(primary_key=True)
@@ -77,6 +95,9 @@ class Livro(models.Model):
 	class Meta:
 		db_table = 'livro'
 
+	def __unicode__(self):
+		return u'%s' %(self.cpf)
+
 class Ingredientes(models.Model):
 	codingr = models.AutoField(primary_key=True)
 	nome= models.CharField(max_length=50)
@@ -85,6 +106,9 @@ class Ingredientes(models.Model):
 
 	class Meta:
 		db_table = 'ingredientes'
+
+	def __unicode__(self):
+		return u'%s' %(self.codingr)
 
 class Funcionario(models.Model):
 	cpf = models.BigIntegerField(primary_key=True)
@@ -96,6 +120,9 @@ class Funcionario(models.Model):
 	class Meta:
 		db_table = 'funcionario'
 
+	def __unicode__(self):
+		return u'%s' %(self.cpf)
+
 
 class Cozinheiro(models.Model):
 	cpf = models.BigIntegerField(primary_key=True)
@@ -106,6 +133,9 @@ class Cozinheiro(models.Model):
 	class Meta:
 		db_table = 'cozinheiro'
 
+	def __unicode__(self):
+		return u'%s' %(self.cpf)
+
 class Degustador(models.Model):
 	cpf = models.BigIntegerField(primary_key=True)
 	curso= models.CharField(max_length=50)
@@ -113,6 +143,9 @@ class Degustador(models.Model):
 
 	class Meta:
 		db_table = 'degustador'
+
+	def __unicode__(self):
+		return u'%s' %(self.cpf)
 
 class Receitas(models.Model):
 	codrec = models.AutoField(primary_key=True)
@@ -130,6 +163,9 @@ class Receitas(models.Model):
 	class Meta:
 		db_table = 'receitas'
 
+	def __unicode__(self):
+		return u'%s' %(self.codrec)
+
 class TesteReceita(models.Model):
 	codrec = models.ForeignKey(Receitas, on_delete=models.CASCADE)
 	cpfdeg = models.ForeignKey(Degustador, on_delete=models.CASCADE)
@@ -140,6 +176,9 @@ class TesteReceita(models.Model):
 	class Meta:
 		db_table = 'teste_receita'
 
+	def __unicode__(self):
+		return u'%s' %(self.codrec)
+
 
 class Conteudo(models.Model):
 	isbn = models.ForeignKey(Livro, on_delete=models.CASCADE)
@@ -147,3 +186,7 @@ class Conteudo(models.Model):
 
 	class Meta:
 		db_table = 'conteudo'
+
+	def __unicode__(self):
+		return u'%s' %(self.isbn)
+

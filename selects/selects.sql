@@ -15,8 +15,8 @@ Select COZ.nomefantasia, count(REC.codrec) from cozinheiro COZ
 -- padaria;
 
 SELECT REC.nome, REC.nroporcoes, REC.tempopreparo, REC.descricao, GOOD.food from receitas REC
-	INNER JOIN goods GOOD on (REC.idgood_id = GOOD.id),
-	INNER JOIN items GOOD.id in (select ITEM.goods_id_id, count(ITEM.id) as cont from items ITEM group by ITEM.goods_id_id order by cont desc limit 1 );
+	INNER JOIN goods GOOD on (REC.idgood_id = GOOD.id)
+	Where GOOD.id = (select ITEM.goods_id_id from items ITEM group by (select count(I.quantidade) from item I where I.goods_id_id = ITEM.goods_id_id desc limit 1 ));
 
 -- apresentar o número de receitas que fazem parte de cada livro, junto com o seu
 -- título e nome de seu editor;
@@ -36,10 +36,8 @@ select REC.nome, TES.data, TES.nota from teste_receita TES
 	Group by TES.cpfdeg_id, REC.nome, TES.data, TES.nota order by TES.nota desc;
 
 -- apresentar o nome das receitas não testadas por degustadores;
-
-select EMP.first, EMP.last, count(RECI.receiptnumber) as quant from employee EMP
-	INNER JOIN receipts RECI on (RECI.employee_id_id = EMP.empid)
-	group by EMP.empid order by quant desc;
+select REC.nome from receitas REC LEFT JOIN teste_receita TES on (TES.codrec_id = REC.codrec)
+	where TES.id is NULL ;
 
 -- apresentar o ranking dos funcionários (employees) com maior número de vendas
 -- na padaria.
@@ -47,3 +45,7 @@ select EMP.first, EMP.last, count(RECI.receiptnumber) as quant from employee EMP
 select EMP.first, EMP.last, count(RECI.receiptnumber) as quant from employee EMP
 	INNER JOIN receipts RECI on (RECI.employee_id_id = EMP.empid)
 	group by EMP.empid order by quant desc;
+
+
+select LIV.nome, LIV.isbn from livro LIV natural join conteudo;
+
